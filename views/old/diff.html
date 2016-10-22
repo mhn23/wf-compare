@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- set charset and set scaling for responsiveness --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta charset="utf-8">
+        
+        <!-- title -->
+        <title>Warframe - App.js</title>
+        
+        <!-- custom css + reset css -->
+        <link rel="stylesheet" href="html.css" type="text/css" />
+        <link rel="stylesheet" href="annotated.css" type="text/css" />
+        
+        <!-- jQuery import -->
+        <script src="//cdn.jsdelivr.net/jquery/3.0.0-rc1/jquery.min.js"></script>
+        <script type="text/javascript" src="jsondiffpatch.min.js"></script> 
+        <script type="text/javascript" src="jsondiffpatch-formatters.min.js"></script> 
+
+    </head>
+    <body>
+       <p id="old">{{old}}</p>
+       <p id="test">{{test}}</p>
+        <div id="visual"></div>
+        <hr/>
+        <div id="annotated"></div>
+        
+        <script>
+            var left = $("#old").text;
+            var right = $("#test").text;
+            var delta = jsondiffpatch.diff(left, right);
+ 
+            // beautiful html diff 
+            document.getElementById('visual').innerHTML = jsondiffpatch.formatters.html.format(delta, left);
+ 
+            // self-explained json 
+            document.getElementById('annotated').innerHTML = jsondiffpatch.formatters.annotated.format(delta, left);
+        </script> 
+        
+    </body>
+</html>

@@ -1,0 +1,244 @@
+body, html {
+    font-family: Helvetica, sans-serif;
+    min-width: 600px;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0px auto;
+}
+
+.files {
+	margin-left: 10px;
+	margin-top: 7px;
+}
+
+.nextdiff {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+}
+
+.nextdiff button {
+	display: inline-block;
+}
+
+#collectguild {
+	margin-right: 5px;
+}
+
+#collectwatchlist {
+	margin-left: 5px;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+#codepre {
+	width: 100%;
+	height: 100%;
+}
+
+#collect {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 100px;
+	margin-left: -50px;
+	text-align: center;
+}
+
+#filelist {
+	width: 250px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#collectlog {
+	width: 250px;
+	height: 80%;
+	overflow-y: scroll;
+}
+
+#filelist ul {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#filelist ul li {
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+#filelist ul li span:hover {
+	cursor: pointer;
+}
+
+
+h1 {
+    margin: 4px;
+}
+
+header > * {
+    display: inline-block;
+}
+
+#description {
+    margin-left: 10px;
+    font-size: x-large;
+}
+
+#external-link {
+    font-size: smaller;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+h2 {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+
+a#fork_me {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.json-input > div {
+    float: left;
+    width: 50%;
+}
+
+.json-input button {
+	margin-top: -17px;
+}
+
+.json-input > div
+{
+    text-align: center;
+}
+
+.CodeMirror
+{
+    text-align: initial;
+    border: 1px solid #ccc;
+}
+
+.json-input > div > textarea {
+    width: 95%;
+    height: 200px;
+}
+
+.prettyfy {
+    font-weight: bold;
+    font-size: smaller;
+    margin-left: 5px;
+}
+
+.buttons {
+    width: 100%;
+    text-align:center;
+    height: 34px;
+	margin-bottom: -35px;
+}
+
+.buttons > div
+{
+    margin: 0 auto;
+}
+
+.json-error {
+    background: #ffdfdf;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.error-message {
+    font-weight: bold;
+    color: red;
+    font-size: smaller;
+    min-height: 20px;
+    display: block;
+}
+
+.header-options {
+    font-weight: normal;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+#delta-panel-visual {
+    width: 100%;
+    overflow: auto;
+}
+
+#visualdiff {
+    margin-top: 4px;
+}
+
+#json-delta {
+    font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Courier, monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+}
+
+#delta-panel-json > p {
+    margin: 4px;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    margin: 40px;
+}
+
+.credits {
+    font-size: smaller;
+}
+
+.credits a {
+    text-decoration: none;
+    color: black;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.results > div {
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* test */
+
+#test {
+	height: 34px;
+	margin-top: -17px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 350px;
+	margin-left: -175px;
+}
+
+#logo {
+	height: 34px;
+	margin-top: -70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 350px;
+	margin-left: -175px;
+	text-align: center
+}

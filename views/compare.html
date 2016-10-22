@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+   <!-- meta -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!-- title -->
+	<title>WarframeCompare</title>
+    
+    <!-- css -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/html.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/annotated.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/codemirror.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
+	
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type='text/javascript' src='js/jsondiffpatch.min.js'></script>
+	<script type='text/javascript' src='js/jsondiffpatch-formatters.min.js'></script>
+	<script type='text/javascript' src='js/diff_match_patch_uncompressed.js'></script>
+	<script type="text/javascript" src="js/codemirror.js"></script>
+	<script type="text/javascript" src="js/javascript.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">War<span class="jsondiffpatch-textdiff-deleted"><span>frame</span></span><span class="jsondiffpatch-textdiff-added"><span>Compare</span></span></a></h1>
+  </header>
+  <div class="nextdiff">
+    <button class="btn btn-default" id="init">init</button>
+	<button class="btn btn-default" id="up">up</button>
+	<button class="btn btn-default" id="down">down</button>
+  </div>
+  
+  <div class="buttons">
+    <div>
+      <input class="btn btn-default" id="swap" type="button" value="Swap">
+      <input class="btn btn-default" id="clear" type="button" value="Clear">
+    </div>
+  </div>
+  <div class="json-input">
+    <div id="json-panel-left">
+      <label for="json-input-left">
+        <h2>{{file1}}</h2>
+      </label>
+      <button class="btn btn-default prettyfy" type="button" title="Pretty print">{format}</button>
+      <textarea id="json-input-left">{{data}}</textarea>
+      <span class="error-message"></span>
+    </div>
+    <div id="json-panel-right">
+      <label for="json-input-right">
+        <h2>{{file2}}</h2>
+      </label>
+      <button class="btn btn-default prettyfy" type="button" title="Pretty print">{format}</button>
+      <textarea id="json-input-right">{{kata}}</textarea>
+      <span class="error-message"></span>
+    </div>
+  </div>
+  <div id="results">
+    <h2>Delta</h2>
+    <label>
+      <input id="show-delta-type-visual" type="radio" name="delta-type" checked>Visual
+    </label>
+    <label>
+      <input id="show-delta-type-json" type="radio" name="delta-type">JSON
+    </label>
+    <label><input id="show-delta-type-annotated" type="radio" name="delta-type">JSON (Annotated)</label>
+    <div id="delta-panel-visual">
+      <div class="header-options">
+        <input id="showunchanged" checked="checked" type="checkbox">
+        <label for="showunchanged">Show unchanged values</label>
+      </div>
+      <p id="visualdiff">
+      </p>
+    </div>
+    <div id="delta-panel-annotated" style="display: none;">
+      <p id="annotateddiff">
+      </p>
+    </div>
+    <div id="delta-panel-json" style="display: none;">
+      <p>(<span id="jsondifflength"></span>KB)</p>
+      <textarea id="json-delta" readonly>
+      </textarea>
+      <span class="error-message"></span>
+    </div>
+  </div>
+  <footer>
+	<p class="credits">WarframeCompare by <a href="http://twitter.com/mhn23">Martin Herrmann</a>, <a href="https://github.com/benjamine/jsondiffpatch">JsonDiffPatch</a> Lib by <a href="http://twitter.com/beneidel">Benjamin Eidelman</a></p>
+  </footer>
+
+  
+  <script src="js/demo.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+</body>
+
+</html>

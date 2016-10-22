@@ -1,0 +1,4 @@
+node_modules/
+userdata/*
+logindata.json
+watchlist.json
